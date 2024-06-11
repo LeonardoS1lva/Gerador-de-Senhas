@@ -8,13 +8,19 @@
     <link rel="stylesheet" href="./src/css/styles.css" />
   </head>
   <body>
-    <header>Gerador de Senhas Aleatórias</header>
+    <header><h1>Gerador de Senhas Aleatórias</h1></header>
     <main>
-      <input type="text" disabled />
+      <input
+        type="text"
+        id="txtSenha"
+        value="Sua senha será gerada aqui"
+        readonly
+      />
       <div class="container">
-        <input type="number" id="tamanho">
+        <input type="number" id="tamanho" value="8"/>
         <button id="btnSenha">Gerar Senha</button>
       </div>
+      <button id="btnCopy">Copiar para área de transferência</button>
     </main>
     <script src="./src/js/script.js"></script>
   </body>

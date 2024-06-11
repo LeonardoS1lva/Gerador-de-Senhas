@@ -1,5 +1,7 @@
 const tamanhoSenha = document.getElementById("tamanho");
 const botaoGerar = document.getElementById("btnSenha");
+const inputSenha = document.getElementById("txtSenha");
+const botaoCopiar = document.getElementById("btnCopy");
 
 function generatePassword(length, options) {
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
@@ -35,9 +37,14 @@ const options = {
 };
 
 const passwordLength = 12;
-const password = generatePassword(passwordLength, options);
-console.log("Senha gerada:", password);
 
 botaoGerar.addEventListener("click", () => {
-  generatePassword(tamanhoSenha.value, options);
+  let password = generatePassword(tamanhoSenha.value, options);
+  inputSenha.value = password;
+});
+
+botaoCopiar.addEventListener("click", () => {
+  inputSenha.select();
+  document.execCommand("copy");
+  alert("Senha copiada para a área de transferência.");
 });
