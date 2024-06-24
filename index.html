@@ -3,6 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Gerador de senhas aleatórias com JavaScript"
+    />
+    <meta
+      name="keywords"
+      content="gerador de senhas, senhas aleatórias, JavaScript"
+    />
+    <meta name="author" content="Leonardo Silva" />
+    <meta name="robots" content="index, follow" />
+    <link
+      rel="shortcut icon"
+      href="./src/images/senha.ico"
+      type="image/x-icon"
+    />
     <title>Gerador de Senhas</title>
     <link rel="stylesheet" href="./src/css/reset.css" />
     <link rel="stylesheet" href="./src/css/styles.css" />
@@ -10,14 +25,18 @@
   <body>
     <header><h1>Gerador de Senhas Aleatórias</h1></header>
     <main>
-      <input
-        type="text"
-        id="txtSenha"
-        value="Sua senha será gerada aqui"
-        readonly
-      />
       <div class="container">
-        <input type="number" id="tamanho" value="8"/>
+        <label for="txtSenha">Senha:</label>
+        <input
+          type="text"
+          id="txtSenha"
+          value="Sua senha será gerada aqui"
+          readonly
+        />
+      </div>
+      <div class="container">
+        <label for="tamanho">Tamanho da senha:</label>
+        <input type="number" id="tamanho" value="8" />
         <button id="btnSenha">Gerar Senha</button>
       </div>
       <button id="btnCopy">Copiar para área de transferência</button>
